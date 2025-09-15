@@ -103,9 +103,7 @@ const ProjectsSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-smooth flex items-end justify-center pb-4">
                     <div className="flex gap-2">
                       <Button size="sm" variant="outline" className="bg-background/90 backdrop-blur-sm" asChild>
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                          <Github size={16} />
-                        </a>
+                        
                       </Button>
                       <Button size="sm" className="bg-primary/90 hover:bg-primary" asChild>
                         <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
