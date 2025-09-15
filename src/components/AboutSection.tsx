@@ -46,9 +46,9 @@ const AboutSection = () => {
   ];
 
   const achievements = [
-    { number: "50+", label: "Projects Completed" },
-    { number: "15+", label: "International Clients" },
-    { number: "5+", label: "Years Experience" },
+    { number: "7+", label: "Projects Completed" },
+    { number: "5+", label: "International Clients" },
+    { number: "2+", label: "Years Experience" },
     { number: "99%", label: "Client Satisfaction" },
   ];
 
