@@ -58,9 +58,7 @@ const Contact = () => {
           opacity: 1,
           y: 0
         }} className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gradient">
-              Let's Work Together
-            </h1>
+            <h1 className="md:text-5xl font-display font-bold mb-6 text-gradient text-3xl">Let's Work Together!</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Ready to bring your project to life? I'd love to hear about your vision and discuss how we can make it happen.
             </p>
