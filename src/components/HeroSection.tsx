@@ -16,10 +16,10 @@ const HeroSection = () => {
       return () => clearTimeout(timeout);
     }
   }, [currentIndex]);
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({
         behavior: "smooth"
       });
     }
@@ -97,7 +97,7 @@ const HeroSection = () => {
               <Link to="/contact">Let's Work Together</Link>
             </Button>
             
-            <Button variant="outline" size="lg" onClick={scrollToAbout} className="text-lg px-8 py-3 border-primary/30 hover:border-primary hover:bg-primary/10">
+            <Button variant="outline" size="lg" onClick={scrollToProjects} className="text-lg px-8 py-3 border-primary/30 hover:border-primary hover:bg-primary/10">
               View My Work
               <ArrowDown className="ml-2" size={18} />
             </Button>
@@ -121,7 +121,7 @@ const HeroSection = () => {
       }} transition={{
         duration: 2,
         repeat: Infinity
-      }} onClick={scrollToAbout} className="cursor-pointer">
+      }} onClick={scrollToProjects} className="cursor-pointer">
           <ArrowDown className="text-muted-foreground hover:text-primary transition-smooth" size={24} />
         </motion.div>
       </motion.div>

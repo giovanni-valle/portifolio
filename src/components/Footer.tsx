@@ -9,6 +9,20 @@ const Footer = () => {
       behavior: "smooth"
     });
   };
+
+  const scrollToSection = (sectionId: string) => {
+    if (sectionId === "top") {
+      scrollToTop();
+      return;
+    }
+    
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  };
   const socialLinks = [{
     icon: <Github size={20} />,
     href: "https://github.com",
@@ -24,13 +38,13 @@ const Footer = () => {
   }];
   const quickLinks = [{
     name: "Home",
-    href: "/"
+    section: "top"
   }, {
     name: "About",
-    href: "/#about"
+    section: "about"
   }, {
     name: "Projects",
-    href: "/#projects"
+    section: "projects"
   }, {
     name: "Contact",
     href: "/contact"
@@ -97,11 +111,22 @@ const Footer = () => {
         }}>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {quickLinks.map(link => <li key={link.name}>
-                  <Link to={link.href} className="text-muted-foreground hover:text-foreground transition-smooth">
-                    {link.name}
-                  </Link>
-                </li>)}
+              {quickLinks.map(link => (
+                <li key={link.name}>
+                  {link.href ? (
+                    <Link to={link.href} className="text-muted-foreground hover:text-foreground transition-smooth">
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <button 
+                      onClick={() => scrollToSection(link.section)}
+                      className="text-muted-foreground hover:text-foreground transition-smooth text-left"
+                    >
+                      {link.name}
+                    </button>
+                  )}
+                </li>
+              ))}
             </ul>
           </motion.div>
 
