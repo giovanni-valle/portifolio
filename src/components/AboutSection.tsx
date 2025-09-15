@@ -28,7 +28,7 @@ const AboutSection = () => {
   }, {
     icon: <Smartphone className="text-primary" size={24} />,
     title: "Mobile Development",
-    description: "Cross-platform apps that reach wider audiences cost-effectively",
+    description: "Mobile-friendly design that works perfectly on phones and tablets",
     proficiency: 75
   }, {
     icon: <Zap className="text-primary" size={24} />,
