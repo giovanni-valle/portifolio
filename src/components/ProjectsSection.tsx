@@ -128,10 +128,7 @@ const ProjectsSection = () => {
 
                   <div className="flex gap-2">
                     <Button size="sm" variant="outline" className="flex-1" asChild>
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github size={16} className="mr-2" />
-                        Code
-                      </a>
+                      
                     </Button>
                     <Button size="sm" className="flex-1" asChild>
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
