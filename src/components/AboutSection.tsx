@@ -3,7 +3,7 @@ import { Code, Database, Globe, Smartphone, Server, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import professionalHeadshot from "@/assets/professional-headshot.jpg";
+import personalHeadshot from "@/assets/personal-headshot.jpg";
 
 const AboutSection = () => {
   const skills = [
@@ -80,7 +80,7 @@ const AboutSection = () => {
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-primary rounded-2xl opacity-20 group-hover:opacity-30 transition-smooth blur-xl"></div>
               <img
-                src={professionalHeadshot}
+                src={personalHeadshot}
                 alt="Professional Developer"
                 className="relative rounded-2xl shadow-elegant w-full max-w-md mx-auto object-cover"
               />
