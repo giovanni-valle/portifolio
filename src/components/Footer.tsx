@@ -9,13 +9,11 @@ const Footer = () => {
       behavior: "smooth"
     });
   };
-
   const scrollToSection = (sectionId: string) => {
     if (sectionId === "top") {
       scrollToTop();
       return;
     }
-    
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({
@@ -111,22 +109,13 @@ const Footer = () => {
         }}>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {quickLinks.map(link => (
-                <li key={link.name}>
-                  {link.href ? (
-                    <Link to={link.href} className="text-muted-foreground hover:text-foreground transition-smooth">
+              {quickLinks.map(link => <li key={link.name}>
+                  {link.href ? <Link to={link.href} className="text-muted-foreground hover:text-foreground transition-smooth">
                       {link.name}
-                    </Link>
-                  ) : (
-                    <button 
-                      onClick={() => scrollToSection(link.section)}
-                      className="text-muted-foreground hover:text-foreground transition-smooth text-left"
-                    >
+                    </Link> : <button onClick={() => scrollToSection(link.section)} className="text-muted-foreground hover:text-foreground transition-smooth text-left">
                       {link.name}
-                    </button>
-                  )}
-                </li>
-              ))}
+                    </button>}
+                </li>)}
             </ul>
           </motion.div>
 
@@ -145,7 +134,8 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-muted-foreground">
               <p>contact@portfolio.dev</p>
-              <p>+1 (555) 123-4567</p>
+              <p>+55 (19) 99206-7245
+            </p>
               <p>Available Worldwide</p>
               <p className="text-sm">Remote & On-site</p>
             </div>
@@ -160,9 +150,7 @@ const Footer = () => {
           opacity: 1
         }} viewport={{
           once: true
-        }} className="text-muted-foreground text-sm mb-4 md:mb-0">
-            © 2024 Professional Portfolio. All rights reserved.
-          </motion.p>
+        }} className="text-muted-foreground text-sm mb-4 md:mb-0">© 2025 Professional Portfolio. All rights reserved.</motion.p>
           
           <motion.button initial={{
           opacity: 0
