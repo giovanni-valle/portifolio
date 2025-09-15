@@ -10,37 +10,37 @@ const AboutSection = () => {
     {
       icon: <Code className="text-primary" size={24} />,
       title: "Frontend Development",
-      description: "React, TypeScript, Next.js, Tailwind CSS",
+      description: "Beautiful, responsive interfaces that convert visitors into customers",
       proficiency: 95,
     },
     {
       icon: <Server className="text-primary" size={24} />,
       title: "Backend Development",
-      description: "Node.js, Python, PostgreSQL, MongoDB",
+      description: "Scalable systems that handle growth and reduce operational costs",
       proficiency: 90,
     },
     {
       icon: <Database className="text-primary" size={24} />,
       title: "Database Design",
-      description: "SQL, NoSQL, Data Architecture",
+      description: "Efficient data structures that improve performance by 40%+",
       proficiency: 85,
     },
     {
       icon: <Globe className="text-primary" size={24} />,
       title: "Cloud & DevOps",
-      description: "AWS, Docker, CI/CD, Kubernetes",
+      description: "Automated deployments that reduce downtime and save hours weekly",
       proficiency: 80,
     },
     {
       icon: <Smartphone className="text-primary" size={24} />,
       title: "Mobile Development",
-      description: "React Native, Flutter, iOS/Android",
+      description: "Cross-platform apps that reach wider audiences cost-effectively",
       proficiency: 75,
     },
     {
       icon: <Zap className="text-primary" size={24} />,
       title: "Performance Optimization",
-      description: "SEO, Core Web Vitals, Analytics",
+      description: "Faster loading speeds that boost search rankings and sales",
       proficiency: 88,
     },
   ];
