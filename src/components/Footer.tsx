@@ -150,7 +150,7 @@ const Footer = () => {
           opacity: 1
         }} viewport={{
           once: true
-        }} className="text-muted-foreground text-sm mb-4 md:mb-0">© 2025 Professional Portfolio. All rights reserved.</motion.p>
+        }} className="text-muted-foreground text-sm mb-4 md:mb-0">© 2025. All rights reserved.</motion.p>
           
           <motion.button initial={{
           opacity: 0
