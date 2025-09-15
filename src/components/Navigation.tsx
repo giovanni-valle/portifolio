@@ -94,9 +94,7 @@ const Navigation = () => {
                     </Link>}
                 </div>)}
               <Button asChild variant="default" size="sm" className="mt-4 w-fit">
-                <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                  Get In Touch
-                </Link>
+                
               </Button>
             </div>
           </motion.div>}
