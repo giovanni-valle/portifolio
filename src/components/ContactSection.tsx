@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -16,8 +15,9 @@ const ContactSection = () => {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -37,24 +37,24 @@ const ContactSection = () => {
       message: ""
     });
   };
-
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
     }));
   };
-
-  return (
-    <section id="contact" className="py-20 bg-muted/50">
+  return <section id="contact" className="py-20 bg-slate-900">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} viewport={{
+        once: true
+      }} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gradient">
             Let's Work Together!
           </h2>
@@ -65,13 +65,17 @@ const ContactSection = () => {
 
         <div className="grid lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {/* Contact Information - Hidden on mobile */}
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }} 
-            whileInView={{ opacity: 1, x: 0 }} 
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }} 
-            className="lg:col-span-1 hidden lg:block"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          x: -20
+        }} whileInView={{
+          opacity: 1,
+          x: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          delay: 0.2
+        }} className="lg:col-span-1 hidden lg:block">
             <div className="space-y-6">
               <Card className="glass-card">
                 <CardHeader>
@@ -121,13 +125,17 @@ const ContactSection = () => {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }} 
-            whileInView={{ opacity: 1, x: 0 }} 
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }} 
-            className="lg:col-span-2 w-full"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          x: 20
+        }} whileInView={{
+          opacity: 1,
+          x: 0
+        }} viewport={{
+          once: true
+        }} transition={{
+          delay: 0.4
+        }} className="lg:col-span-2 w-full">
             <Card className="glass-card">
               <CardHeader>
                 <CardTitle>Start Your Project</CardTitle>
@@ -142,27 +150,13 @@ const ContactSection = () => {
                       <label htmlFor="name" className="block text-sm font-medium mb-2">
                         Full Name *
                       </label>
-                      <Input 
-                        id="name" 
-                        type="text" 
-                        value={formData.name} 
-                        onChange={e => handleInputChange("name", e.target.value)} 
-                        placeholder="John Doe" 
-                        required 
-                      />
+                      <Input id="name" type="text" value={formData.name} onChange={e => handleInputChange("name", e.target.value)} placeholder="John Doe" required />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium mb-2">
                         Email Address *
                       </label>
-                      <Input 
-                        id="email" 
-                        type="email" 
-                        value={formData.email} 
-                        onChange={e => handleInputChange("email", e.target.value)} 
-                        placeholder="john@company.com" 
-                        required 
-                      />
+                      <Input id="email" type="email" value={formData.email} onChange={e => handleInputChange("email", e.target.value)} placeholder="john@company.com" required />
                     </div>
                   </div>
 
@@ -170,41 +164,31 @@ const ContactSection = () => {
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
                       Project Details *
                     </label>
-                    <Textarea 
-                      id="message" 
-                      value={formData.message} 
-                      onChange={e => handleInputChange("message", e.target.value)} 
-                      placeholder="Tell me about your project, timeline, budget, and any specific requirements..." 
-                      rows={6} 
-                      required 
-                    />
+                    <Textarea id="message" value={formData.message} onChange={e => handleInputChange("message", e.target.value)} placeholder="Tell me about your project, timeline, budget, and any specific requirements..." rows={6} required />
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    size="lg" 
-                    disabled={isSubmitting} 
-                    className="w-full shadow-glow"
-                  >
-                    {isSubmitting ? "Sending..." : (
-                      <>
+                  <Button type="submit" size="lg" disabled={isSubmitting} className="w-full shadow-glow">
+                    {isSubmitting ? "Sending..." : <>
                         <Send size={18} className="mr-2" />
                         Send Message
-                      </>
-                    )}
+                      </>}
                   </Button>
                 </form>
               </CardContent>
             </Card>
 
             {/* Response Time - Only visible on mobile, below the form */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              className="lg:hidden mt-8"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            delay: 0.6
+          }} className="lg:hidden mt-8">
               <Card className="glass-card">
                 <CardHeader>
                   <CardTitle>Response Time</CardTitle>
@@ -220,8 +204,6 @@ const ContactSection = () => {
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
