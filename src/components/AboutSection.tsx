@@ -63,9 +63,7 @@ const AboutSection = () => {
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gradient">
             About Me
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Passionate about creating digital solutions that make a difference in businesses worldwide.
-          </p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Passionate about creating digital solutions that make a difference in businesses worldwide!</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
@@ -109,16 +107,14 @@ const AboutSection = () => {
             </div>
 
             <div className="pt-6">
-              <Button 
-                size="lg" 
-                className="shadow-glow"
-                onClick={() => {
-                  const element = document.getElementById("contact");
-                  if (element) {
-                    element.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-              >
+              <Button size="lg" className="shadow-glow" onClick={() => {
+              const element = document.getElementById("contact");
+              if (element) {
+                element.scrollIntoView({
+                  behavior: "smooth"
+                });
+              }
+            }}>
                 Start a Project
               </Button>
             </div>
