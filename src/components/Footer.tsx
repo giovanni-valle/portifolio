@@ -114,7 +114,7 @@ const Footer = () => {
         }}>
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>contact@portfolio.dev</p>
+              <p>contact@giovannivalle.com.br</p>
               <p>+55 (19) 99206-7245
             </p>
               <p>Available Worldwide</p>
