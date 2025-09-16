@@ -17,7 +17,7 @@ const Navigation = () => {
   }, []);
   const navItems = [{
     name: "Home",
-    href: "/"
+    href: "/#top"
   }, {
     name: "About",
     href: "/#about"
@@ -28,9 +28,22 @@ const Navigation = () => {
     name: "Contact",
     href: "/#contact"
   }];
+  const scrollToTop = () => {
+    setIsMobileMenuOpen(false);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   const scrollToSection = (sectionId: string) => {
     // Close mobile menu first
     setIsMobileMenuOpen(false);
+    
+    if (sectionId === "top") {
+      scrollToTop();
+      return;
+    }
     
     if (location.pathname !== "/") {
       // Navigate to home page first, then scroll
@@ -79,9 +92,9 @@ const Navigation = () => {
       <nav className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="text-lg sm:text-xl font-display font-bold text-gradient flex-shrink-0">
+          <button onClick={scrollToTop} className="text-lg sm:text-xl font-display font-bold text-gradient flex-shrink-0">
             Giovanni Valle
-          </Link>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
