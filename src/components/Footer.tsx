@@ -76,24 +76,7 @@ const Footer = () => {
         {/* Footer Content */}
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true
-        }} className="md:col-span-2">
-            <Link to="/" className="text-2xl font-display font-bold text-gradient mb-4 block">
-              Portfolio
-            </Link>
-            <p className="text-muted-foreground mb-6 max-w-md">
-              Professional full-stack developer creating exceptional digital experiences 
-              for clients worldwide. Specializing in modern web applications and scalable solutions.
-            </p>
-            
-          </motion.div>
+          
 
           {/* Quick Links */}
           <motion.div initial={{
