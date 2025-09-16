@@ -93,8 +93,17 @@ const HeroSection = () => {
         }} transition={{
           delay: 0.9
         }} className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button asChild size="lg" className="shadow-glow text-lg px-8 py-3">
-              <Link to="/contact">Let's Work Together</Link>
+            <Button 
+              size="lg" 
+              className="shadow-glow text-lg px-8 py-3"
+              onClick={() => {
+                const element = document.getElementById("contact");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              Let's Work Together
             </Button>
             
             <Button variant="outline" size="lg" onClick={scrollToProjects} className="text-lg px-8 py-3 border-primary/30 hover:border-primary hover:bg-primary/10">

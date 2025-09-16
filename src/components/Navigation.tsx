@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,6 +7,7 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -21,25 +22,54 @@ const Navigation = () => {
     name: "About",
     href: "/#about"
   }, {
-    name: "Projects",
+    name: "Projects", 
     href: "/#projects"
   }, {
     name: "Contact",
-    href: "/contact"
+    href: "/#contact"
   }];
   const scrollToSection = (sectionId: string) => {
-    if (location.pathname !== "/") {
-      window.location.href = sectionId;
-      return;
-    }
-    const element = document.getElementById(sectionId.replace("/#", ""));
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    }
+    // Close mobile menu first
     setIsMobileMenuOpen(false);
+    
+    if (location.pathname !== "/") {
+      // Navigate to home page first, then scroll
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      // Already on home page, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  const handleContactClick = () => {
+    // Close mobile menu first
+    setIsMobileMenuOpen(false);
+    
+    if (location.pathname !== "/") {
+      // Navigate to home page first, then scroll
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById("contact");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      // Already on home page, just scroll
+      const element = document.getElementById("contact");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   };
   return <motion.header initial={{
     y: -100
@@ -55,19 +85,30 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            {navItems.map(item => <div key={item.name}>
-                {item.href.startsWith("/#") ? <button onClick={() => scrollToSection(item.href)} className="text-foreground/70 hover:text-foreground transition-smooth whitespace-nowrap">
+            {navItems.map(item => (
+              <div key={item.name}>
+                {item.href.startsWith("/#") ? (
+                  <button 
+                    onClick={() => scrollToSection(item.href.replace("/#", ""))} 
+                    className="text-foreground/70 hover:text-foreground transition-smooth whitespace-nowrap"
+                  >
                     {item.name}
-                  </button> : <Link to={item.href} className="text-foreground/70 hover:text-foreground transition-smooth whitespace-nowrap">
+                  </button>
+                ) : (
+                  <Link 
+                    to={item.href} 
+                    className="text-foreground/70 hover:text-foreground transition-smooth whitespace-nowrap"
+                  >
                     {item.name}
-                  </Link>}
-              </div>)}
+                  </Link>
+                )}
+              </div>
+            ))}
           </div>
 
-          {/* CTA Button */}
           <div className="hidden md:block flex-shrink-0">
-            <Button asChild variant="default" size="sm" className="shadow-glow">
-              <Link to="/contact">Get In Touch</Link>
+            <Button size="sm" className="shadow-glow" onClick={handleContactClick}>
+              Get In Touch
             </Button>
           </div>
 
@@ -98,14 +139,16 @@ const Navigation = () => {
           className="md:hidden mt-4 py-6 border-t border-border/30 bg-background/95 backdrop-blur-md rounded-lg mx-2"
         >
             <div className="flex flex-col space-y-6 px-4">
-              {navItems.map(item => <div key={item.name}>
-                  {item.href.startsWith("/#") ? 
+              {navItems.map(item => (
+                <div key={item.name}>
+                  {item.href.startsWith("/#") ? (
                     <button 
-                      onClick={() => scrollToSection(item.href)} 
+                      onClick={() => scrollToSection(item.href.replace("/#", ""))} 
                       className="block text-left text-lg text-foreground/70 hover:text-foreground transition-smooth py-2"
                     >
                       {item.name}
-                    </button> : 
+                    </button>
+                  ) : (
                     <Link 
                       to={item.href} 
                       onClick={() => setIsMobileMenuOpen(false)} 
@@ -113,11 +156,12 @@ const Navigation = () => {
                     >
                       {item.name}
                     </Link>
-                  }
-                </div>)}
+                  )}
+                </div>
+              ))}
               <div className="pt-4">
-                <Button asChild variant="default" size="sm" className="w-full shadow-glow">
-                  <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Get In Touch</Link>
+                <Button size="sm" className="w-full shadow-glow" onClick={handleContactClick}>
+                  Get In Touch
                 </Button>
               </div>
             </div>

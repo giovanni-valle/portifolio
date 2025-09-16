@@ -109,8 +109,17 @@ const AboutSection = () => {
             </div>
 
             <div className="pt-6">
-              <Button asChild size="lg" className="shadow-glow">
-                <Link to="/contact">Start a Project</Link>
+              <Button 
+                size="lg" 
+                className="shadow-glow"
+                onClick={() => {
+                  const element = document.getElementById("contact");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
+                Start a Project
               </Button>
             </div>
           </motion.div>

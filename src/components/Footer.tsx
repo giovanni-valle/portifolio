@@ -45,7 +45,7 @@ const Footer = () => {
     section: "projects"
   }, {
     name: "Contact",
-    href: "/contact"
+    section: "contact"
   }];
   return <footer className="bg-card/50 border-t border-border/30">
       <div className="container mx-auto px-6 py-16">
@@ -67,8 +67,12 @@ const Footer = () => {
               Let's turn your ideas into exceptional digital experiences. 
               I'm here to help you succeed in the digital world.
             </p>
-            <Button asChild size="lg" className="shadow-glow">
-              <Link to="/contact">Get In Touch Today</Link>
+            <Button 
+              size="lg" 
+              className="shadow-glow"
+              onClick={() => scrollToSection("contact")}
+            >
+              Get In Touch Today
             </Button>
           </div>
         </motion.div>
@@ -92,13 +96,16 @@ const Footer = () => {
         }}>
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {quickLinks.map(link => <li key={link.name}>
-                  {link.href ? <Link to={link.href} className="text-muted-foreground hover:text-foreground transition-smooth">
-                      {link.name}
-                    </Link> : <button onClick={() => scrollToSection(link.section)} className="text-muted-foreground hover:text-foreground transition-smooth text-left">
-                      {link.name}
-                    </button>}
-                </li>)}
+              {quickLinks.map(link => (
+                <li key={link.name}>
+                  <button 
+                    onClick={() => scrollToSection(link.section)} 
+                    className="text-muted-foreground hover:text-foreground transition-smooth text-left"
+                  >
+                    {link.name}
+                  </button>
+                </li>
+              ))}
             </ul>
           </motion.div>
 
