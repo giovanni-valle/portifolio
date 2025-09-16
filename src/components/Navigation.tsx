@@ -29,13 +29,14 @@ const Navigation = () => {
   }];
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== "/") {
-      window.location.href = `/${sectionId}`;
+      window.location.href = sectionId;
       return;
     }
-    const element = document.getElementById(sectionId.replace("#", ""));
+    const element = document.getElementById(sectionId.replace("/#", ""));
     if (element) {
       element.scrollIntoView({
-        behavior: "smooth"
+        behavior: "smooth",
+        block: "start"
       });
     }
     setIsMobileMenuOpen(false);
