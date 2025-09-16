@@ -47,7 +47,7 @@ const Footer = () => {
     name: "Contact",
     section: "contact"
   }];
-  return <footer className="bg-card/50 border-t border-border/30">
+  return <footer className="border-t border-border/30 bg-slate-900">
       <div className="container mx-auto px-6 py-16 bg-slate-900">
         {/* Main CTA */}
         <motion.div initial={{
