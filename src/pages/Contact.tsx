@@ -65,7 +65,7 @@ const Contact = () => {
           </motion.div>
 
           <div className="grid lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-            {/* Contact Information */}
+            {/* Contact Information - Hidden on mobile */}
             <motion.div initial={{
             opacity: 0,
             x: -20
@@ -74,7 +74,7 @@ const Contact = () => {
             x: 0
           }} transition={{
             delay: 0.2
-          }} className="lg:col-span-1">
+          }} className="lg:col-span-1 hidden lg:block">
               <div className="space-y-6">
                 <Card className="glass-card">
                   <CardHeader>
@@ -132,7 +132,7 @@ const Contact = () => {
             x: 0
           }} transition={{
             delay: 0.4
-          }} className="lg:col-span-2">
+          }} className="lg:col-span-2 w-full">
               <Card className="glass-card">
                 <CardHeader>
                   <CardTitle>Start Your Project</CardTitle>
@@ -175,6 +175,26 @@ const Contact = () => {
                   </form>
                 </CardContent>
               </Card>
+
+              {/* Response Time - Only visible on mobile, below the form */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                animate={{ opacity: 1, y: 0 }} 
+                transition={{ delay: 0.6 }}
+                className="lg:hidden mt-8"
+              >
+                <Card className="glass-card">
+                  <CardHeader>
+                    <CardTitle>Response Time</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground text-sm">
+                      I typically respond to all inquiries within 24 hours during business days.
+                      For urgent projects, please mention it in your message.
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </motion.div>
           </div>
         </div>
