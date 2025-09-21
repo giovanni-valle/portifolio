@@ -55,9 +55,7 @@ const HeroSection = () => {
           opacity: 1
         }} transition={{
           delay: 0.3
-        }} className="text-primary font-medium text-lg mb-4">
-            Olá, sou um Profissional
-          </motion.p>
+        }} className="text-primary font-medium text-lg mb-4">Construo sites e sistemas sob medida.</motion.p>
 
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
             <span className="text-gradient">{displayedText}</span>
@@ -78,11 +76,7 @@ const HeroSection = () => {
           opacity: 1
         }} transition={{
           delay: 0.6
-        }} className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Crio experiências digitais excepcionais que impulsionam o crescimento dos negócios.
-            Especialista em aplicações web modernas, APIs e soluções escaláveis
-            para clientes internacionais.
-          </motion.p>
+        }} className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">Desenvolvo websites e sistemas digitais para empresas no Brasil e exterior. Soluções personalizadas para melhorar sua presença online e apoiar o crescimento do seu negócio.</motion.p>
 
           <motion.div initial={{
           opacity: 0,
@@ -93,16 +87,14 @@ const HeroSection = () => {
         }} transition={{
           delay: 0.9
         }} className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              size="lg" 
-              className="shadow-glow text-lg px-8 py-3"
-              onClick={() => {
-                const element = document.getElementById("contact");
-                if (element) {
-                  element.scrollIntoView({ behavior: "smooth" });
-                }
-              }}
-            >
+            <Button size="lg" className="shadow-glow text-lg px-8 py-3" onClick={() => {
+            const element = document.getElementById("contact");
+            if (element) {
+              element.scrollIntoView({
+                behavior: "smooth"
+              });
+            }
+          }}>
               Vamos Trabalhar Juntos
             </Button>
             

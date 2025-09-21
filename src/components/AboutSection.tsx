@@ -94,16 +94,9 @@ const AboutSection = () => {
           once: true
         }} className="space-y-6">
             <div className="prose prose-lg text-muted-foreground">
-              <p className="text-lg leading-relaxed">Com mais de 2 anos de experiência em desenvolvimento full-stack, me especializo em construir aplicações web escaláveis e soluções digitais que impulsionam o crescimento dos negócios. Minha paixão está em transformar ideias complexas em experiências elegantes e amigáveis ao usuário.</p>
-              <p className="text-lg leading-relaxed">
-                Tive o privilégio de trabalhar com clientes de diversas indústrias na América do Norte, 
-                Europa e Ásia, entregando projetos que vão desde plataformas de e-commerce até 
-                dashboards empresariais e aplicações mobile.
-              </p>
-              <p className="text-lg leading-relaxed">
-                Minha abordagem combina expertise técnica com conhecimento de negócios, garantindo que cada solução 
-                não apenas funcione perfeitamente, mas também contribua para seus resultados.
-              </p>
+              <p className="text-lg leading-relaxed">Desenvolvedor web com sólida experiência de 2+ anos ajudando empresas a crescerem através de soluções digitais eficientes. Transformo ideias e necessidades de negócio em websites e sistemas que impulsionam vendas, melhoram processos e fortalecem a presença digital. Minha abordagem é sempre colaborativa, focando em entregar soluções que realmente agreguem valor ao seu negócio.</p>
+              
+              
             </div>
 
             <div className="pt-6">
