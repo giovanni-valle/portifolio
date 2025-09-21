@@ -55,7 +55,7 @@ const HeroSection = () => {
           opacity: 1
         }} transition={{
           delay: 0.3
-        }} className="text-primary font-medium text-lg mb-4">Construo sites e sistemas sob medida.</motion.p>
+        }} className="text-primary font-medium text-lg mb-4">Construo sites e sistemas sob medida!</motion.p>
 
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
             <span className="text-gradient">{displayedText}</span>
