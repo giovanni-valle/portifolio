@@ -67,9 +67,7 @@ const Footer = () => {
               Vamos transformar suas ideias em experiências digitais excepcionais. 
               Estou aqui para ajudá-lo a ter sucesso no mundo digital.
             </p>
-            <Button size="lg" className="shadow-glow" onClick={() => scrollToSection("contact")}>
-              Entre em Contato Hoje
-            </Button>
+            <Button size="lg" className="shadow-glow" onClick={() => scrollToSection("contact")}>Comece Seu Projeto</Button>
           </div>
         </motion.div>
 
@@ -114,7 +112,7 @@ const Footer = () => {
         }}>
             <h4 className="font-semibold mb-4">Contato</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>contact@giovannivalle.com.br</p>
+              <p>contato@giovannivalle.com.br</p>
               <p>+55 (19) 99206-7245
             </p>
               <p>Disponível Mundialmente</p>
