@@ -12,48 +12,48 @@ import projectSocial from "@/assets/project-social.jpg";
 import projectFintech from "@/assets/project-fintech.jpg";
 const ProjectsSection = () => {
   const projects = [{
-    title: "Analytics Dashboard",
-    description: "Real-time analytics platform with advanced data visualization and customizable reporting features for enterprise clients.",
+    title: "Dashboard de Analytics",
+    description: "Plataforma de analytics em tempo real com visualização avançada de dados e recursos personalizáveis de relatórios para clientes empresariais.",
     image: projectDashboard,
     technologies: ["React", "TypeScript", "D3.js", "Node.js", "PostgreSQL"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
     category: "Web App"
   }, {
-    title: "E-commerce Platform",
-    description: "Full-featured online store with inventory management, payment processing, and multi-vendor support.",
+    title: "Plataforma E-commerce",
+    description: "Loja online completa com gerenciamento de inventário, processamento de pagamentos e suporte multi-vendedor.",
     image: projectEcommerce,
     technologies: ["Next.js", "Stripe", "MongoDB", "Tailwind CSS", "Vercel"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
     category: "E-commerce"
   }, {
-    title: "Corporate Website",
-    description: "Modern corporate website with CMS integration, SEO optimization, and multi-language support.",
+    title: "Site Corporativo",
+    description: "Site corporativo moderno com integração CMS, otimização SEO e suporte multi-idiomas.",
     image: projectCorporate,
     technologies: ["React", "Headless CMS", "GraphQL", "GSAP", "AWS"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
     category: "Website"
   }, {
-    title: "Task Management System",
-    description: "Collaborative project management tool with kanban boards, time tracking, and team collaboration features.",
+    title: "Sistema de Gestão de Tarefas",
+    description: "Ferramenta de gerenciamento colaborativo com quadros kanban, controle de tempo e recursos de colaboração em equipe.",
     image: projectTaskManager,
     technologies: ["Vue.js", "Node.js", "Socket.io", "Redis", "Docker"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
     category: "SaaS"
   }, {
-    title: "Social Media Platform",
-    description: "Modern social networking platform with real-time messaging, content sharing, and advanced privacy controls.",
+    title: "Plataforma de Rede Social",
+    description: "Plataforma de rede social moderna com mensagens em tempo real, compartilhamento de conteúdo e controles avançados de privacidade.",
     image: projectSocial,
     technologies: ["React Native", "Firebase", "GraphQL", "TypeScript", "Redis"],
     githubUrl: "https://github.com",
     liveUrl: "https://example.com",
     category: "Mobile"
   }, {
-    title: "FinTech Trading Platform",
-    description: "Advanced trading platform with real-time market data, portfolio management, and algorithmic trading features.",
+    title: "Plataforma de Trading FinTech",
+    description: "Plataforma avançada de trading com dados de mercado em tempo real, gerenciamento de portfólio e recursos de trading algorítmico.",
     image: projectFintech,
     technologies: ["Python", "FastAPI", "React", "WebSocket", "PostgreSQL"],
     githubUrl: "https://github.com",
@@ -72,11 +72,11 @@ const ProjectsSection = () => {
         once: true
       }} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gradient">
-            Featured Projects
+            Projetos em Destaque
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            A selection of recent projects showcasing modern web development, innovative solutions, 
-            and successful client collaborations.
+            Uma seleção de projetos recentes mostrando desenvolvimento web moderno, soluções inovadoras, 
+            e colaborações bem-sucedidas com clientes.
           </p>
         </motion.div>
 
@@ -131,7 +131,7 @@ const ProjectsSection = () => {
                     <Button size="sm" className="flex-1" asChild>
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                         <ExternalLink size={16} className="mr-2" />
-                        Live Demo
+                        Ver Projeto
                       </a>
                     </Button>
                   </div>

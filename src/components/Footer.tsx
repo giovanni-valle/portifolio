@@ -35,16 +35,16 @@ const Footer = () => {
     label: "Email"
   }];
   const quickLinks = [{
-    name: "Home",
+    name: "Início",
     section: "top"
   }, {
-    name: "About",
+    name: "Sobre",
     section: "about"
   }, {
-    name: "Projects",
+    name: "Projetos",
     section: "projects"
   }, {
-    name: "Contact",
+    name: "Contato",
     section: "contact"
   }];
   return <footer className="border-t border-border/30 bg-slate-900">
@@ -61,14 +61,14 @@ const Footer = () => {
       }} className="text-center mb-16">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-3xl md:text-4xl font-display font-bold mb-6 text-gradient">
-              Ready to Start Your Project?
+              Pronto para Iniciar Seu Projeto?
             </h3>
             <p className="text-xl text-muted-foreground mb-8">
-              Let's turn your ideas into exceptional digital experiences. 
-              I'm here to help you succeed in the digital world.
+              Vamos transformar suas ideias em experiências digitais excepcionais. 
+              Estou aqui para ajudá-lo a ter sucesso no mundo digital.
             </p>
             <Button size="lg" className="shadow-glow" onClick={() => scrollToSection("contact")}>
-              Get In Touch Today
+              Entre em Contato Hoje
             </Button>
           </div>
         </motion.div>
@@ -90,7 +90,7 @@ const Footer = () => {
         }} transition={{
           delay: 0.1
         }}>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4">Links Rápidos</h4>
             <ul className="space-y-2">
               {quickLinks.map(link => <li key={link.name}>
                   <button onClick={() => scrollToSection(link.section)} className="text-muted-foreground hover:text-foreground transition-smooth text-left">
@@ -112,13 +112,13 @@ const Footer = () => {
         }} transition={{
           delay: 0.2
         }}>
-            <h4 className="font-semibold mb-4">Contact</h4>
+            <h4 className="font-semibold mb-4">Contato</h4>
             <div className="space-y-2 text-muted-foreground">
               <p>contact@giovannivalle.com.br</p>
               <p>+55 (19) 99206-7245
             </p>
-              <p>Available Worldwide</p>
-              <p className="text-sm">Remote & On-site</p>
+              <p>Disponível Mundialmente</p>
+              <p className="text-sm">Remoto & Presencial</p>
             </div>
           </motion.div>
         </div>
@@ -131,7 +131,7 @@ const Footer = () => {
           opacity: 1
         }} viewport={{
           once: true
-        }} className="text-muted-foreground text-sm mb-4 md:mb-0">© 2025. All rights reserved.</motion.p>
+        }} className="text-muted-foreground text-sm mb-4 md:mb-0">© 2025. Todos os direitos reservados.</motion.p>
           
           <motion.button initial={{
           opacity: 0
@@ -141,7 +141,7 @@ const Footer = () => {
           once: true
         }} onClick={scrollToTop} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-smooth">
             <ArrowUp size={16} />
-            Back to Top
+            Voltar ao Topo
           </motion.button>
         </div>
       </div>

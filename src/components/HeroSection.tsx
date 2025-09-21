@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 const HeroSection = () => {
   const [displayedText, setDisplayedText] = useState("");
-  const fullText = "Full-Stack Developer";
+  const fullText = "Desenvolvedor Full-Stack";
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     if (currentIndex < fullText.length) {
@@ -56,7 +56,7 @@ const HeroSection = () => {
         }} transition={{
           delay: 0.3
         }} className="text-primary font-medium text-lg mb-4">
-            Hello, I'm a Professional
+            Olá, sou um Profissional
           </motion.p>
 
           <h1 className="text-5xl md:text-7xl font-display font-bold mb-6">
@@ -79,9 +79,9 @@ const HeroSection = () => {
         }} transition={{
           delay: 0.6
         }} className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            I create exceptional digital experiences that drive business growth.
-            Specializing in modern web applications, APIs, and scalable solutions
-            for international clients.
+            Crio experiências digitais excepcionais que impulsionam o crescimento dos negócios.
+            Especialista em aplicações web modernas, APIs e soluções escaláveis
+            para clientes internacionais.
           </motion.p>
 
           <motion.div initial={{
@@ -103,11 +103,11 @@ const HeroSection = () => {
                 }
               }}
             >
-              Let's Work Together
+              Vamos Trabalhar Juntos
             </Button>
             
             <Button variant="outline" size="lg" onClick={scrollToProjects} className="text-lg px-8 py-3 border-primary/30 hover:border-primary hover:bg-primary/10">
-              View My Work
+              Ver Meu Trabalho
               <ArrowDown className="ml-2" size={18} />
             </Button>
           </motion.div>

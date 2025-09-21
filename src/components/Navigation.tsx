@@ -16,16 +16,16 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const navItems = [{
-    name: "Home",
+    name: "Início",
     href: "/#top"
   }, {
-    name: "About",
+    name: "Sobre",
     href: "/#about"
   }, {
-    name: "Projects", 
+    name: "Projetos", 
     href: "/#projects"
   }, {
-    name: "Contact",
+    name: "Contato",
     href: "/#contact"
   }];
   const scrollToTop = () => {
@@ -121,7 +121,7 @@ const Navigation = () => {
 
           <div className="hidden md:block flex-shrink-0">
             <Button size="sm" className="shadow-glow" onClick={handleContactClick}>
-              Get In Touch
+              Entre em Contato
             </Button>
           </div>
 
@@ -174,7 +174,7 @@ const Navigation = () => {
               ))}
               <div className="pt-4">
                 <Button size="sm" className="w-full shadow-glow" onClick={handleContactClick}>
-                  Get In Touch
+                  Entre em Contato
                 </Button>
               </div>
             </div>

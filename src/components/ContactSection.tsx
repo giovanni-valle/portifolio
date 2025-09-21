@@ -25,8 +25,8 @@ const ContactSection = () => {
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you within 24 hours."
+      title: "Mensagem Enviada!",
+      description: "Obrigado por entrar em contato. Retornarei em até 24 horas."
     });
     setIsSubmitting(false);
     setFormData({
@@ -56,10 +56,10 @@ const ContactSection = () => {
         once: true
       }} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gradient">
-            Let's Work Together!
+            Vamos Trabalhar Juntos!
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to bring your project to life? I'd love to hear about your vision and discuss how we can make it happen.
+            Pronto para dar vida ao seu projeto? Adoraria ouvir sobre sua visão e discutir como podemos torná-la realidade.
           </p>
         </motion.div>
 
@@ -93,7 +93,7 @@ const ContactSection = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
                     <Phone className="text-primary" size={20} />
-                    Phone
+                    Telefone
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -105,20 +105,20 @@ const ContactSection = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
                     <MapPin className="text-primary" size={20} />
-                    Location
+                    Localização
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">Available Worldwide</p>
-                  <p className="text-sm text-muted-foreground mt-1">Remote & On-site</p>
+                  <p className="text-muted-foreground">Disponível Mundialmente</p>
+                  <p className="text-sm text-muted-foreground mt-1">Remoto & Presencial</p>
                 </CardContent>
               </Card>
 
               <div className="pt-6">
-                <h3 className="font-semibold mb-4">Response Time</h3>
+                <h3 className="font-semibold mb-4">Tempo de Resposta</h3>
                 <p className="text-muted-foreground text-sm">
-                  I typically respond to all inquiries within 24 hours during business days.
-                  For urgent projects, please mention it in your message.
+                  Geralmente respondo a todas as consultas em até 24 horas durante dias úteis.
+                  Para projetos urgentes, por favor mencione na sua mensagem.
                 </p>
               </div>
             </div>
@@ -138,9 +138,9 @@ const ContactSection = () => {
         }} className="lg:col-span-2 w-full">
             <Card className="glass-card">
               <CardHeader>
-                <CardTitle>Start Your Project</CardTitle>
+                <CardTitle>Inicie Seu Projeto</CardTitle>
                 <p className="text-muted-foreground">
-                  Tell me about your project and let's discuss how I can help you achieve your goals.
+                  Conte-me sobre seu projeto e vamos discutir como posso ajudá-lo a alcançar seus objetivos.
                 </p>
               </CardHeader>
               <CardContent>
@@ -148,29 +148,29 @@ const ContactSection = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-2">
-                        Full Name *
+                        Nome Completo *
                       </label>
-                      <Input id="name" type="text" value={formData.name} onChange={e => handleInputChange("name", e.target.value)} placeholder="John Doe" required />
+                      <Input id="name" type="text" value={formData.name} onChange={e => handleInputChange("name", e.target.value)} placeholder="João Silva" required />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium mb-2">
-                        Email Address *
+                        Endereço de Email *
                       </label>
-                      <Input id="email" type="email" value={formData.email} onChange={e => handleInputChange("email", e.target.value)} placeholder="john@company.com" required />
+                      <Input id="email" type="email" value={formData.email} onChange={e => handleInputChange("email", e.target.value)} placeholder="joao@empresa.com" required />
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Project Details *
+                      Detalhes do Projeto *
                     </label>
-                    <Textarea id="message" value={formData.message} onChange={e => handleInputChange("message", e.target.value)} placeholder="Tell me about your project, timeline, budget, and any specific requirements..." rows={6} required />
+                    <Textarea id="message" value={formData.message} onChange={e => handleInputChange("message", e.target.value)} placeholder="Conte-me sobre seu projeto, cronograma, orçamento e requisitos específicos..." rows={6} required />
                   </div>
 
                   <Button type="submit" size="lg" disabled={isSubmitting} className="w-full shadow-glow">
-                    {isSubmitting ? "Sending..." : <>
+                    {isSubmitting ? "Enviando..." : <>
                         <Send size={18} className="mr-2" />
-                        Send Message
+                        Enviar Mensagem
                       </>}
                   </Button>
                 </form>
@@ -191,12 +191,12 @@ const ContactSection = () => {
           }} className="lg:hidden mt-8">
               <Card className="glass-card">
                 <CardHeader>
-                  <CardTitle>Response Time</CardTitle>
+                  <CardTitle>Tempo de Resposta</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm">
-                    I typically respond to all inquiries within 24 hours during business days.
-                    For urgent projects, please mention it in your message.
+                    Geralmente respondo a todas as consultas em até 24 horas durante dias úteis.
+                    Para projetos urgentes, por favor mencione na sua mensagem.
                   </p>
                 </CardContent>
               </Card>

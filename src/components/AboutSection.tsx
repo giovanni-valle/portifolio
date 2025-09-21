@@ -7,47 +7,47 @@ import personalHeadshot from "@/assets/personal-headshot.jpg";
 const AboutSection = () => {
   const skills = [{
     icon: <Code className="text-primary" size={24} />,
-    title: "Frontend Development",
-    description: "Beautiful, responsive interfaces that convert visitors into customers",
+    title: "Desenvolvimento Frontend",
+    description: "Interfaces bonitas e responsivas que convertem visitantes em clientes",
     proficiency: 95
   }, {
     icon: <Server className="text-primary" size={24} />,
-    title: "Backend Development",
-    description: "Scalable systems that handle growth and reduce operational costs",
+    title: "Desenvolvimento Backend",
+    description: "Sistemas escaláveis que suportam crescimento e reduzem custos operacionais",
     proficiency: 90
   }, {
     icon: <Database className="text-primary" size={24} />,
-    title: "Database Design",
-    description: "Efficient data structures that improve performance by 40%+",
+    title: "Design de Banco de Dados",
+    description: "Estruturas de dados eficientes que melhoram a performance em 40%+",
     proficiency: 85
   }, {
     icon: <Globe className="text-primary" size={24} />,
     title: "Cloud & DevOps",
-    description: "Automated deployments that reduce downtime and save hours weekly",
+    description: "Deploys automatizados que reduzem downtime e poupam horas semanais",
     proficiency: 80
   }, {
     icon: <Smartphone className="text-primary" size={24} />,
-    title: "Mobile Development",
-    description: "Mobile-friendly design that works perfectly on phones and tablets",
+    title: "Desenvolvimento Mobile",
+    description: "Design mobile-friendly que funciona perfeitamente em phones e tablets",
     proficiency: 75
   }, {
     icon: <Zap className="text-primary" size={24} />,
-    title: "Performance Optimization",
-    description: "Faster loading speeds that boost search rankings and sales",
+    title: "Otimização de Performance",
+    description: "Carregamento mais rápido que melhora rankings e vendas",
     proficiency: 88
   }];
   const achievements = [{
     number: "7+",
-    label: "Projects Completed"
+    label: "Projetos Concluídos"
   }, {
     number: "5+",
-    label: "International Clients"
+    label: "Clientes Internacionais"
   }, {
     number: "2+",
-    label: "Years Experience"
+    label: "Anos de Experiência"
   }, {
     number: "99%",
-    label: "Client Satisfaction"
+    label: "Satisfação do Cliente"
   }];
   return <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-6">
@@ -61,9 +61,9 @@ const AboutSection = () => {
         once: true
       }} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-6 text-gradient">
-            About Me
+            Sobre Mim
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Passionate about creating digital solutions that make a difference in businesses worldwide!</p>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">Apaixonado por criar soluções digitais que fazem a diferença em negócios ao redor do mundo!</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
@@ -94,15 +94,15 @@ const AboutSection = () => {
           once: true
         }} className="space-y-6">
             <div className="prose prose-lg text-muted-foreground">
-              <p className="text-lg leading-relaxed">With over 2 years of experience in full-stack development, I specialize in building scalable web applications and digital solutions that drive business growth. My passion lies in transforming complex ideas into elegant, user-friendly experiences.</p>
+              <p className="text-lg leading-relaxed">Com mais de 2 anos de experiência em desenvolvimento full-stack, me especializo em construir aplicações web escaláveis e soluções digitais que impulsionam o crescimento dos negócios. Minha paixão está em transformar ideias complexas em experiências elegantes e amigáveis ao usuário.</p>
               <p className="text-lg leading-relaxed">
-                I've had the privilege of working with clients from various industries across North America, 
-                Europe, and Asia, delivering projects that range from e-commerce platforms to enterprise 
-                dashboards and mobile applications.
+                Tive o privilégio de trabalhar com clientes de diversas indústrias na América do Norte, 
+                Europa e Ásia, entregando projetos que vão desde plataformas de e-commerce até 
+                dashboards empresariais e aplicações mobile.
               </p>
               <p className="text-lg leading-relaxed">
-                My approach combines technical expertise with business acumen, ensuring that every solution 
-                not only works flawlessly but also contributes to your bottom line.
+                Minha abordagem combina expertise técnica com conhecimento de negócios, garantindo que cada solução 
+                não apenas funcione perfeitamente, mas também contribua para seus resultados.
               </p>
             </div>
 
@@ -115,7 +115,7 @@ const AboutSection = () => {
                 });
               }
             }}>
-                Start a Project
+                Iniciar um Projeto
               </Button>
             </div>
           </motion.div>
@@ -132,7 +132,7 @@ const AboutSection = () => {
         once: true
       }} className="mb-20">
           <h3 className="text-3xl font-display font-bold text-center mb-12">
-            Technical Expertise
+            Expertise Técnica
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skill, index) => <motion.div key={skill.title} initial={{
@@ -159,7 +159,7 @@ const AboutSection = () => {
                         </p>
                         <div className="space-y-1">
                           <div className="flex justify-between text-xs">
-                            <span>Proficiency</span>
+                            <span>Proficiência</span>
                             <span>{skill.proficiency}%</span>
                           </div>
                           <div className="w-full bg-muted rounded-full h-2">
