@@ -116,7 +116,7 @@ const ContactSection = () => {
 
               <div className="pt-6">
                 <h3 className="font-semibold mb-4">Tempo de Resposta</h3>
-                <p className="text-muted-foreground text-sm">Retorno todas as mensagens em até 24 horas durante a semana. Se for urgente, me avise na mensagem que dou prioridade!"</p>
+                <p className="text-muted-foreground text-sm">Retorno todas as mensagens em até 24 horas durante a semana. Se for um projeto urgente, me avise na mensagem que dou prioridade!</p>
               </div>
             </div>
           </motion.div>
@@ -188,7 +188,7 @@ const ContactSection = () => {
           }} className="lg:hidden mt-8">
               <Card className="glass-card">
                 <CardHeader>
-                  <CardTitle>Tempo de Resposta</CardTitle>
+                  <CardTitle>Retorno todas as mensagens em até 24 horas durante a semana. Se for um projeto urgente, me avise na mensagem que dou prioridade!</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground text-sm">
